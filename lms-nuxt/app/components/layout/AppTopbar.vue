@@ -11,14 +11,15 @@ const onLogout = () => {
 </script>
 
 <template>
-  <header class="topbar">
+  <header class="topbar flex items-center justify-between">
     <div>
-      <strong>Enterprise Learning Workspace</strong>
-      <div class="muted" style="font-size:12px;">{{ authStore.user?.name }} · {{ authStore.user?.company || 'Global Tenant' }}</div>
+      <strong>Welcome back</strong>
+      <div class="muted" style="font-size: 12px;">
+        {{ authStore.user?.name ?? 'Guest' }} · {{ authStore.user?.company ?? 'Global' }}
+      </div>
     </div>
-    <div class="topbar-actions">
-      <input class="input" placeholder="Search modules..." style="width: 240px;" />
-      <span class="badge">{{ authStore.role }}</span>
+    <div class="flex items-center gap-4">
+      <span class="badge" v-if="authStore.role">{{ authStore.role }}</span>
       <button class="btn outline" @click="onLogout">Logout</button>
     </div>
   </header>

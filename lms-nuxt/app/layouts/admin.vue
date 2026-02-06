@@ -1,10 +1,11 @@
 <template>
-  <div class="page-shell">
+  <div class="flex">
     <AppSidebar />
-    <section class="workspace">
+    <div class="main-content">
       <AppTopbar />
-      <main class="main-content"><slot /></main>
-    </section>
-    <ThemeCustomizer />
+      <div style="margin-top: 24px;">
+        <slot />
+      </div>
+    </div>
   </div>
 </template>

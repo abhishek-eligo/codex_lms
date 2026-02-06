@@ -68,13 +68,11 @@ export const getNavigationForRole = (role: UserRole) => {
   if (role === 'SA') {
     return [
       { label: 'Dashboard', to: '/sa/dashboard' },
-      { label: 'Course List', to: '/sa/courses' },
-      { label: 'Create Course', to: '/sa/courses/create' },
+      { label: 'Courses', to: '/sa/courses' },
       { label: 'Lesson Builder', to: '/sa/courses/builder' },
       { label: 'Companies', to: '/sa/companies' },
       { label: 'Users', to: '/sa/users' },
       { label: 'Marketplace', to: '/sa/marketplace' },
-      { label: 'Business Rules', to: '/sa/rules' },
       { label: 'Config', to: '/sa/config' }
     ]
   }

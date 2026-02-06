@@ -12,11 +12,11 @@ const navItems = computed(() => (authStore.role ? getNavigationForRole(authStore
 
 <template>
   <aside class="sidebar">
-    <div class="brand">
-      <img :src="configStore.logo" alt="LMS" />
+    <div class="flex items-center gap-4" style="margin-bottom: 24px;">
+      <img :src="configStore.logo" alt="LMS" style="width: 40px; height: 40px;" />
       <div>
         <strong>Enterprise LMS</strong>
-        <div style="font-size: 12px; opacity: .8;">{{ authStore.role || 'Guest' }}</div>
+        <div class="muted" style="font-size: 12px;">{{ authStore.role ?? 'Guest' }}</div>
       </div>
     </div>
     <nav>
@@ -26,7 +26,7 @@ const navItems = computed(() => (authStore.role ? getNavigationForRole(authStore
         :to="item.to"
         :class="{ active: route.path === item.to }"
       >
-        {{ item.label }}
+        <span>{{ item.label }}</span>
       </NuxtLink>
     </nav>
   </aside>
