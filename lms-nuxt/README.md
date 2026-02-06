@@ -22,4 +22,4 @@ Runs at http://localhost:3000
 Use the login screen to switch roles (mock auth).
 
 ## Notes
-- The default favicon is an SVG (`/app/public/favicon.svg`) to avoid binary diff issues in PR tooling.
+- The default favicon is an SVG (`/public/favicon.svg`) to avoid binary diff issues in PR tooling.
