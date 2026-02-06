@@ -1,7 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  srcDir: 'app/',
   modules: ['@pinia/nuxt'],
   css: ['~/assets/css/variables.css'],
   typescript: {
